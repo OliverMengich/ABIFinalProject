@@ -1,0 +1,145 @@
+.hero {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(4.jpg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 40px 120px;
+}
+
+.nav-links {
+    flex: 1;
+}
+
+.nav-links ul {
+    margin-left: 50px;
+    display: inline;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+    text-transform: uppercase;
+}
+
+.nav-links ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: yellow;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 0;
+    background: yellow;
+    font-weight: bold;
+    border-radius: 120px;
+    cursor: pointer;
+}
+
+.nav-links .btn {
+    float: right;
+}
+
+.banner-title {
+    margin: 80px 130px;
+    color: #fff;
+}
+
+.banner-title h1 {
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+
+.banner-title h1 span {
+    color: yellow;
+}
+
+.vertical-bar {
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.search-icons {
+    height: 60%;
+    width: 80px;
+}
+
+.search-icons .fa {
+    margin: 45px 23px;
+    display: block;
+    cursor: pointer;
+    height: 30px;
+}
+
+.social-icons {
+    height: 35%;
+    width: 80px;
+    background: yellow;
+    text-align: center;
+    padding-top: 27%;
+    bottom: 0;
+    position: absolute;
+}
+
+.social-icons .fa {
+    margin: 15px;
+    display: block;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+}
+
+.insureBox {
+    margin: 20px;
+    padding: 20px 20px;
+    background: white;
+    color: black;
+    align-items: center;
+    width: 300px;
+    border-radius: 20px;
+    height: 100px;
+}
+
+.first {
+    visibility: collapse;
+}
+
+.second {
+    visibility: collapse;
+}
+
+.third {
+    visibility: collapse;
+}

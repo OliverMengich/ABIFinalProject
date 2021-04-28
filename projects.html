@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(6.jpg);
+        }
+        
+        .window {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            background: yellow;
+            padding: 10px 10px;
+            height: 300px;
+            width: 400px;
+            border-radius: 20px;
+            display: none;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .insureBox {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <h1 style="font-family: 'Akaya Telivigala', cursive; color:white; margin:15px 15px; font-size: 50px;">Bihashara Invest</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <a href="test.html">
+                        <li>HOME</li>
+                    </a>
+                    <a href="#">
+                        <li>ABOUT US</li>
+                    </a>
+                    <a href="#">
+                        <li>PROJECTS</li>
+                    </a>
+                    <a href="microInsurance.html">
+                        <li>INSURANCE</li>
+                    </a>
+                    <a href="#">
+                        <li>JOIN Us</li>
+                    </a>
+                </ul>
+                <button type="button" class="btn" id="monthlyBtn">Initiate a project</button>
+            </div>
+        </div>
+        <div class="banner-title">
+            <h2 style="font-family: 'Lobster', cursive;">Active Projects</h2>
+            <div style="display: flex;">
+                <div class="insureBox" style="visibility: hidden;">
+                    <h3 id="name1">Project Name</h3>
+                    <h4 id="desc1">Project description</h4>
+                    <h3 id="amount1">None</h3>
+                    <h5 id="votes1">Votes</h5>
+                </div>
+                <div class="insureBox" style="visibility: hidden">
+                    <h3 id="name2">Project Name</h3>
+                    <h4 id="desc2">Project description</h4>
+                    <h3 id="amount2">None</h3>
+                    <h5 id="votes2">Votes</h5>
+                </div>
+                <div class="insureBox" style="visibility: hidden;">
+                    <h3 id="name3">Project Name</h3>
+                    <h4 id="desc3">Project description</h4>
+                    <h3 id="amount3">None</h3>
+                    <h5 id="votes3">Votes</h5>
+                </div>
+            </div>
+        </div>
+        <div class="vertical-bar" id="vertical-bar">
+            <div class="search-icons">
+                <img class="fa" id="list" src="list.png">
+                <img class="fa" src="magnifying-glass.png">
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img class="fa fa-facebook" src="facebook.png"></a>
+                <a href="https://instagram.com"><img class="fa fa-instagram" src="instagram.png"></a>
+                <a href="https://twitter.com"><img class="fa fa-twitter" src="twitter.png"></a>
+            </div>
+        </div>
+        <div class="window" id="window">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>INITIATE A PROJECT</h3>
+                <form style="display: flex; flex-direction:column;">
+                    <label style="font-size: 20px;" for="fname">Project Name</label>
+                    <input required style="width: 200px; height:30px; border-radius:20px;" type="text" id="fname" name="fname">
+                    <label style="font-size: 20px;" for="fname">Project Description</label>
+                    <input required style="width: 200px; height:30px; border-radius:20px;" type="text" id="fname1" name="fname">
+                    <label style="font-size: 20px;" for="fname">Amount</label>
+                    <input style="width: 200px; height:30px; border-radius:20px;" type="number" id="fname2" name="fname">
+                    <button id="submit" style=" margin:20px 20px;padding: 10px 20px; border: 0; background: rgb(241, 7, 7); font-weight: bold; border-radius: 120px; cursor: pointer; width:120px" type="button">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="window" id="window1">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Aprove a Project</h3>
+                <form style="display: flex; flex-direction:column;">
+                    <label style="font-size: 20px;" for="fname">Click button if you approve the project</label>
+                    <input required style="width: 200px; height:30px; border-radius:20px;" type="text" id="fname" name="fname">
+
+                    <button id="submit" style=" margin:20px 20px;padding: 10px 20px; border: 0; background: rgb(241, 7, 7); font-weight: bold; border-radius: 120px; cursor: pointer; width:120px" type="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let list = document.getElementById("list");
+        let bar = document.getElementById("vertical-bar");
+        let listStatus = false;
+
+        var btn = document.getElementById("monthlyBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var modal = document.getElementById("window");
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        list.onclick = function() {
+            if (listStatus == false) {
+                bar.style.width = "300px";
+                listStatus = true;
+            } else {
+                bar.style.width = "81px";
+                listStatus = false;
+            }
+        };
+
+        var insure1 = document.getElementsByClassName("insureBox")[0];
+        var submit = document.getElementById("submit");
+        submit.onclick = function() {
+            insure1.style.visibility = "visible";
+            document.getElementById("name1").innerHTML = document.getElementById("fname").value;
+            document.getElementById("desc1").innerHTML = document.getElementById("fname1").value;
+            document.getElementById("amount1").innerHTML = document.getElementById("fname2").value + "/=";
+            document.getElementById("votes1") = 1 + "approvals";
+
+        }
+        var cod = document.getElementById("window1");
+        insure1.onclick = function() {
+            cod.style.display = "block";
+        }
+        span.onclick = function() {
+            cod.style.display = "none";
+        }
+    </script>
+    <script src="script2.js"></script>
+</body>
+
+</html>

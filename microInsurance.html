@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(5.jpg);
+        }
+        
+        .window {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            background: yellow;
+            padding: 10px 10px;
+            height: 300px;
+            width: 400px;
+            border-radius: 20px;
+            display: none;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <h1 style="font-family: 'Akaya Telivigala', cursive; color:white; margin:15px 15px; font-size: 50px;">Bihashara Invest</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <a href="test.html">
+                        <li>HOME</li>
+                    </a>
+                    <a href="#">
+                        <li>ABOUT US</li>
+                    </a>
+                    <a href="projects.html">
+                        <li>PROJECTS</li>
+                    </a>
+                    <a href="#">
+                        <li>INSURANCE</li>
+                    </a>
+                    <a href="#">
+                        <li>JOIN Us</li>
+                    </a>
+                </ul>
+                <button type="button" id="monthlyBtn" class="btn">Get Insured Today</button>
+            </div>
+        </div>
+        <div class="banner-title">
+            <h2 style="font-family: 'Lobster', cursive;">Get Insured Today</h2>
+            <div style="display: flex;">
+                <div class="insureBox first">
+                    <h3>Oliver Kipkemei</h3>
+                    <h4>25000</h4>
+                    <h5>Votes: 0</h5>
+                </div>
+                <div class="insureBox second">
+                    <h3>Jane Doe</h3>
+                    <h4>25000</h4>
+                    <h5>Votes: </h5>
+                </div>
+                <div class="insureBox third">
+                    <h3>John Doe</h3>
+                    <h4>25000</h4>
+                    <h5>Votes: </h5>
+                </div>
+            </div>
+        </div>
+        <div class="vertical-bar" id="vertical-bar">
+            <div class="search-icons"><img class="fa" id="list" src="list.png"><img class="fa" src="magnifying-glass.png"></div>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img class="fa fa-facebook" src="facebook.png"></a>
+                <a href="https://instagram.com"><img class="fa fa-instagram" src="instagram.png"></a>
+                <a href="https://twitter.com"><img class="fa fa-twitter" src="twitter.png"></a>
+            </div>
+        </div>
+        <div class="window" id="window">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>GET INSURED TODAY</h3>
+                <form style="display: flex; flex-direction:column;">
+                    <label style="font-size: 20px;" for="fname">Enter your FullName</label>
+                    <input style="width: 200px; height:30px; border-radius:20px;" type="text" id="fname" name="fname">
+                    <label style="font-size: 20px;" for="fname">Amount</label>
+                    <input readonly placeholder="25000" style="width: 200px; height:30px; border-radius:20px;" type="number" id="fname" name="fname">
+                    <button id="submit" style=" margin:20px 20px;padding: 10px 20px; border: 0; background: rgb(241, 7, 7); font-weight: bold; border-radius: 120px; cursor: pointer; width:120px" type="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let list = document.getElementById("list");
+        let bar = document.getElementById("vertical-bar");
+        let listStatus = false;
+
+        var btn = document.getElementById("monthlyBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var modal = document.getElementById("window");
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        list.onclick = function() {
+            if (listStatus == false) {
+                bar.style.width = "300px";
+                listStatus = true;
+            } else {
+                bar.style.width = "81px";
+                listStatus = false;
+            }
+        };
+    </script>
+    <script src="script2.js" async defer></script>
+</body>
+
+</html>

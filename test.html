@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Bihashara Invest</title>
+    <style>
+        .custom-shape-divider-bottom-1619508068 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        
+        .custom-shape-divider-bottom-1619508068 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 184px;
+            transform: rotateY(180deg);
+        }
+        
+        .custom-shape-divider-bottom-1619508068 .shape-fill {
+            fill: yellow;
+        }
+        
+        .window {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            background: yellow;
+            padding: 10px 10px;
+            height: 200px;
+            width: 400px;
+            border-radius: 20px;
+            display: block;
+        }
+        /*.model-content {
+            display: block;
+        }*/
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <h1 style="font-family: 'Akaya Telivigala', cursive; color:white; margin:15px 15px; font-size: 50px;">Bihashara Invest</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <a href="test.html">
+                        <li>HOME</li>
+                    </a>
+                    <a href="#">
+                        <li>ABOUT US</li>
+                    </a>
+                    <a href="projects.html">
+                        <li>PROJECTS</li>
+                    </a>
+                    <a href="#">
+                        <li>INSURANCE</li>
+                    </a>
+                    <a href="#">
+                        <li>JOIN Us</li>
+                    </a>
+                </ul>
+                <button type="button" class="btn">SIGN UP</button>
+            </div>
+        </div>
+        <div class="banner-title">
+            <h1 style="font-family: 'Lobster', cursive;">We are Focused <span> In improving the life </span> of people around</h1>
+            <button type="button" class="btn" id="monthlyBtn">MONTHLY CONTRIBUTION</button>
+        </div>
+        <div class="vertical-bar">
+            <div class="search-icons">
+                <img class="fa" id="list" src="list.png">
+                <img class="fa" src="magnifying-glass.png">
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img class="fa fa-facebook" src="facebook.png"></a>
+                <a href="https://instagram.com"><img class="fa fa-instagram" src="instagram.png"></a>
+                <a href="https://twitter.com"><img class="fa fa-twitter" src="twitter.png"></a>
+            </div>
+        </div>
+        <div class="wave">
+            <div class="custom-shape-divider-bottom-1619508068">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="window" id="window">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>SEND YOUR MONTHLY CONTRIBUTION</h3>
+                <form style="display: flex; flex-direction:column;">
+                    <label style="font-size: 20px;" for="fname">Amount</label>
+                    <input style="width: 200px; height:30px; border-radius:20px;" type="number" id="fname" name="fname">
+                    <button style=" margin:20px 20px;padding: 10px 20px; border: 0; background: rgb(241, 7, 7); font-weight: bold; border-radius: 120px; cursor: pointer; width:120px" type="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("monthlyBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var modal = document.getElementById("window");
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        let list = document.getElementById("list");
+    </script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
